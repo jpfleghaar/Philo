@@ -1,0 +1,17 @@
+# Build artifacts
+*.o
+obj/
+bin/
+philo/philo
+
+# Tester cloned by "make tester"
+tester/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets
+.env
+secrets/
