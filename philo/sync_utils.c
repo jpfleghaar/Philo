@@ -47,3 +47,18 @@ void	de_sync_philo(t_philo *philo)
 		ft_usleep(philo->table->time_to_eat / 2, philo->table);
 	}
 }
+
+/// @brief Prints the thinking status. With an odd number of philosophers,
+/// waits a little so the neighbours get a fair chance to take the forks.
+void	thinking(t_philo *philo)
+{
+	long	t_think;
+
+	write_philo_status(G "is thinking", philo);
+	if (philo->table->philosophers % 2 == 0)
+		return ;
+	t_think = philo->table->time_to_eat * 2 - philo->table->time_to_sleep;
+	if (t_think < 0)
+		t_think = 0;
+	ft_usleep(t_think / 2, philo->table);
+}

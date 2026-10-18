@@ -61,7 +61,7 @@ void	*dinner_simulation(void *data)
 		eat(philo);
 		write_philo_status(Y "is sleeping", philo);
 		ft_usleep(philo->table->time_to_sleep, philo->table);
-		write_philo_status(G "is thinking", philo);
+		thinking(philo);
 	}
 	return (NULL);
 }
