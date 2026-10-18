@@ -53,9 +53,11 @@ static long	ft_atol(const char *str)
 	nbr = 0;
 	str = correct_input(str);
 	while (ft_is_digit(*str))
+	{
 		nbr = (nbr * 10) + (*str++ - 48);
-	if (nbr > INT_MAX)
-		error_and_exit("Number is bigger than INT_MAX (2147483647)");
+		if (nbr > INT_MAX)
+			error_and_exit("Number is bigger than INT_MAX (2147483647)");
+	}
 	return (nbr);
 }
 
