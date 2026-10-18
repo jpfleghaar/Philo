@@ -11,7 +11,7 @@ TESTER_DIR 	= tester
 TARGET = $(BIN_DIR)/philo
 
 # Source files (manually listed)
-SRC_FILES = main.c dinner.c getters_setters.c init.c monitor.c parsing.c safe_funktions.c \
+SRC_FILES = main.c dinner.c getters_setters.c init.c monitor.c parsing.c safe_functions.c \
             sync_utils.c utils.c
 
 # Define the full source and object file paths (without using SRC_DIR)
