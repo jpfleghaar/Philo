@@ -55,6 +55,8 @@ void	clean_all(t_table *tabel)
 		safe_mtx(&philo->philo_mtx, DESTROY);
 	}
 	i = -1;
+	while (++i < tabel->philosophers)
+		safe_mtx(&tabel->forks[i].fork, DESTROY);
 	pthread_mutex_destroy(&tabel->table_mtx);
 	free(tabel->forks);
 	free(tabel->philo);
