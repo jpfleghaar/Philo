@@ -70,6 +70,8 @@ void	check_input(t_table *table, char **argv)
 	table->time_to_die = ft_atol(argv[2]);
 	table->time_to_eat = ft_atol(argv[3]);
 	table->time_to_sleep = ft_atol(argv[4]);
+	if (table->philosophers < 1)
+		error_and_exit("Use at least one philosopher!");
 	if (table->time_to_die < 60 || table->time_to_eat < 60
 		|| table->time_to_sleep < 60)
 		error_and_exit("Use values greater than 60ms!");
